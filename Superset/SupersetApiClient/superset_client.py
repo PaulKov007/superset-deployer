@@ -1,5 +1,7 @@
 import requests
 from functools import cached_property
+
+from SupersetApiClient.charts import Charts
 from SupersetApiClient.dashboards import Dashboards
 from SupersetApiClient.datasets import Datasets
 
@@ -13,6 +15,7 @@ class SupersetClient:
 
         self.dashboards = Dashboards(self)
         self.datasets = Datasets(self)
+        self.charts = Charts(self)
 
     @cached_property
     def session(self) -> requests.sessions.Session:

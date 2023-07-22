@@ -1,5 +1,6 @@
 import dataclasses
 import datetime
+import io
 import json
 import os
 from SupersetApiClient.exceptions import *
@@ -90,10 +91,13 @@ class DataModel:
         return f"{self.api_object.object_type}_{self.get_name()}" \
                f"{datetime.datetime.now().strftime('_%Y%m%dT%H%M%S') if add_ts else ''}"
 
-    def export(self, dir_path: str, filename: str = None) -> str:
-        return self.api_object.export(ids=[self.id], dir_path=dir_path, filename=filename or self.export_name())
+    def export_to_file(self, dir_path: str, filename: str = None) -> str:
+        return self.api_object.export_to_file(ids=[self.id], dir_path=dir_path, filename=filename or self.export_name())
 
-    def update(self) -> None:
+    def export_to_buffer(self) -> io.BytesIO:
+        return self.api_object.export_to_buffer(ids=[self.id])
+
+    def update(self) -> '__class__':
         res = self.api_object.client.get(self.api_endpoint).json().get("result")
         for f in self.fields():
             if f.name in res or f.metadata.get("json_parent") in res:
@@ -104,10 +108,12 @@ class DataModel:
                 else:
                     setattr(self, f.name,
                             res[f_name][json_prop] if type(res[f_name]) is dict and json_prop else res[f_name])
+        return self
 
-    def save(self) -> None:
+    def save(self) -> '__class__':
         json_obj = self.to_json(columns=self.api_object.edit_columns)
         self.api_object.client.put(self.api_endpoint, json=json_obj)
+        return self
 
     def delete(self) -> bool:
         return self.api_object.client.delete(self.api_endpoint).json().get("message") == "OK"

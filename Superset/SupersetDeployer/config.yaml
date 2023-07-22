@@ -1,0 +1,5 @@
+empty_dash_retention_in_days: 2
+deploy_path: "superset_objects"
+turn_chart_description: True
+deploy_level: "dataset" # dataset/chart/dashboard
+delete_old_object_versions: True

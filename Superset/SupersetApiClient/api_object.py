@@ -1,6 +1,7 @@
 import json
 import yaml
 import os
+import io
 from functools import cached_property
 from SupersetApiClient.data_model import DataModel
 
@@ -85,7 +86,7 @@ class ApiObject:
         obj.api_object = self
         return obj.id
 
-    def export(self, ids: list[int], dir_path: str, filename: str) -> None:
+    def export_to_file(self, ids: list[int], dir_path: str, filename: str) -> str:
         ids_array = ",".join([str(i) for i in ids])
         response = self.client.get(self.export_endpoint, params={"q": f"[{ids_array}]"})
         file_path: str = os.path.join(dir_path, filename)
@@ -109,6 +110,23 @@ class ApiObject:
             raise ValueError(f"Unknown content type {content_type}")
         return file_path
 
+    def export_to_buffer(self, ids: list[int]) -> io.BytesIO:
+        ids_array = ",".join([str(i) for i in ids])
+        response = self.client.get(self.export_endpoint, params={"q": f"[{ids_array}]"})
+        content_type = response.headers["content-type"].strip()
+        buffer = io.BytesIO()
+        if content_type.startswith("application/text"):
+            data = yaml.load(response.text, Loader=yaml.FullLoader)
+            yaml.dump(data, buffer, default_flow_style=False)
+        elif content_type.startswith("application/json"):
+            data = response.json()
+            json.dump(data, buffer, ensure_ascii=False, indent=4)
+        elif content_type.startswith("application/zip"):
+            buffer.write(response.content)
+        else:
+            raise ValueError(f"Unknown content type {content_type}")
+        return buffer
+
     def import_from_file(self, file_path: str, overwrite: bool = False, passwords=None) -> bool:
         passwords = {f"databases/{db}.yaml": pwd for db, pwd in (passwords or {}).items()}
         file_name = os.path.split(file_path)[-1]
@@ -125,6 +143,7 @@ class ApiObject:
                 headers={"Accept": "application/json"},
             )
             return response.json().get("message") == "OK"
+
 
     @cached_property
     def _info(self) -> str:
