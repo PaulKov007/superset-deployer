@@ -1,0 +1,29 @@
+_deploy_dataset_name: covid_vaccines
+cache_timeout: null
+certification_details: null
+certified_by: null
+dataset_uuid: 974b7a1c-22ea-49cb-9214-97b7dbd511e0
+description: null
+params:
+  adhoc_filters: []
+  bottom_margin: auto
+  color_scheme: SUPERSET_DEFAULT
+  columns: []
+  datasource: 14__table
+  groupby:
+  - clinical_stage
+  label_colors: {}
+  metrics:
+  - count
+  row_limit: 10000
+  show_legend: false
+  time_range: No filter
+  url_params: {}
+  viz_type: dist_bar
+  x_ticks_layout: auto
+  y_axis_format: SMART_NUMBER
+query_context: null
+slice_name: Vaccine Candidates per Phase 1
+uuid: 392f293e-0892-4316-bd41-c927b65606a4
+version: 1.0.0
+viz_type: dist_bar

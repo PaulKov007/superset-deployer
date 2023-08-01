@@ -1,0 +1,1 @@
+SELECT date, total_membership - lag(total_membership) OVER (ORDER BY date) AS new_members FROM exported_stats

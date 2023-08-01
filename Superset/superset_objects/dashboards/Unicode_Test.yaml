@@ -1,0 +1,37 @@
+css: null
+dashboard_title: Unicode Test
+description: null
+metadata: {}
+position:
+  CHART-Hkx6154FEm:
+    children: []
+    id: CHART-Hkx6154FEm
+    meta:
+      _deploy_chart_name: Unicode_Cloud
+      chartId: 263
+      height: 30
+      sliceName: slice 1
+      uuid: 609e26d8-8e1e-4097-9751-931708e24ee4
+      width: 4
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-SyT19EFEQ
+    id: GRID_ID
+    type: GRID
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-SyT19EFEQ:
+    children:
+    - CHART-Hkx6154FEm
+    id: ROW-SyT19EFEQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+slug: unicode-test
+uuid: 6b2de44e-7db1-4264-bfc1-ac3c00d42fad
+version: 1.0.0

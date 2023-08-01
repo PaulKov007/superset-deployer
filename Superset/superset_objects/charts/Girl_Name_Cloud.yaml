@@ -1,0 +1,32 @@
+_deploy_dataset_name: birth_names
+cache_timeout: null
+certification_details: null
+certified_by: null
+dataset_uuid: 7ec75d28-760b-4189-899a-7d9e3aadee07
+description: null
+params:
+  adhoc_filters:
+  - clause: WHERE
+    comparator: girl
+    expressionType: SIMPLE
+    operator: ==
+    subject: gender
+  compare_lag: '10'
+  compare_suffix: o10Y
+  granularity_sqla: ds
+  groupby: []
+  limit: '100'
+  markup_type: markdown
+  metric: sum__num
+  rotation: square
+  row_limit: 50000
+  series: name
+  size_from: '10'
+  size_to: '70'
+  time_range: '100 years ago : now'
+  viz_type: word_cloud
+query_context: null
+slice_name: Girl Name Cloud
+uuid: 14447868-0d53-4db3-ba2a-ca3b7e885def
+version: 1.0.0
+viz_type: word_cloud

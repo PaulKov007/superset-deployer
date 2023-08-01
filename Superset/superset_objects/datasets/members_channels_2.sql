@@ -1,0 +1,1 @@
+SELECT c.name AS channel_name, u.name AS member_name FROM channel_members cm JOIN channels c ON cm.channel_id = c.id JOIN users u ON cm.user_id = u.id

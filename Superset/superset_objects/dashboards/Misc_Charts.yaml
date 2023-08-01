@@ -1,0 +1,100 @@
+css: null
+dashboard_title: Misc Charts
+description: null
+position:
+  CHART-HJOYVMV0E7:
+    children: []
+    id: CHART-HJOYVMV0E7
+    meta:
+      _deploy_chart_name: Mapbox_LongLat
+      chartId: 163
+      height: 63
+      sliceName: Mapbox Long/Lat
+      uuid: d3bb4922-d6ce-4f8f-8417-ef2ab7192300
+      width: 6
+    type: CHART
+  CHART-S1WYNz4AVX:
+    children: []
+    id: CHART-S1WYNz4AVX
+    meta:
+      _deploy_chart_name: Parallel_Coordinates
+      chartId: 175
+      height: 25
+      sliceName: Parallel Coordinates
+      uuid: 59eccf21-4cdc-45bc-9358-22c8209b3cda
+      width: 4
+    type: CHART
+  CHART-rkgF4G4A4X:
+    children: []
+    id: CHART-rkgF4G4A4X
+    meta:
+      _deploy_chart_name: Birth_in_France_by_department_in_2016
+      chartId: 164
+      height: 25
+      sliceName: Birth in France by department in 2016
+      uuid: fec22de7-aaa3-4f47-9b78-ef48369be081
+      width: 8
+    type: CHART
+  COLUMN-ByUFVf40EQ:
+    children:
+    - CHART-rywK4GVR4X
+    - CHART-HJOYVMV0E7
+    id: COLUMN-ByUFVf40EQ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    type: COLUMN
+  COLUMN-rkmYVGN04Q:
+    children:
+    - CHART-rJ4K4GV04Q
+    - CHART-H1HYNzEANX
+    id: COLUMN-rkmYVGN04Q
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 6
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-SytNzNA4X
+    - ROW-S1MK4M4A4X
+    - ROW-HkFFEzVRVm
+    id: GRID_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Misc Charts
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-HkFFEzVRVm:
+    children:
+    - CHART-r19KVMNCE7
+    - CHART-BkeVbh8ANQ
+    id: ROW-HkFFEzVRVm
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-S1MK4M4A4X:
+    children:
+    - COLUMN-rkmYVGN04Q
+    - COLUMN-ByUFVf40EQ
+    id: ROW-S1MK4M4A4X
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-SytNzNA4X:
+    children:
+    - CHART-rkgF4G4A4X
+    - CHART-S1WYNz4AVX
+    id: ROW-SytNzNA4X
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+slug: misc_charts
+uuid: 3a639d63-ca23-40f5-9cea-aa6d22aaa7e4
+version: 1.0.0

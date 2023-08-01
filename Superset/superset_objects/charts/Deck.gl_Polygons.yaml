@@ -1,0 +1,87 @@
+_deploy_dataset_name: sf_population_polygons
+cache_timeout: null
+certification_details: null
+certified_by: null
+dataset_uuid: 12353aaf-44d6-4879-b80b-1489f88c3914
+description: null
+params:
+  datasource: 11__table
+  extruded: true
+  fill_color_picker:
+    a: 1
+    b: 73
+    g: 65
+    r: 3
+  filled: true
+  granularity_sqla: null
+  js_columns: []
+  js_data_mutator: ''
+  js_onclick_href: ''
+  js_tooltip: ''
+  legend_format: .1s
+  legend_position: tr
+  line_column: contour
+  line_type: json
+  linear_color_scheme: oranges
+  mapbox_style: mapbox://styles/mapbox/light-v9
+  metric:
+    aggregate: SUM
+    column:
+      column_name: population
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 1332
+      is_dttm: false
+      optionName: _col_population
+      python_date_format: null
+      type: BIGINT
+      verbose_name: null
+    expressionType: SIMPLE
+    hasCustomLabel: true
+    label: Population
+    optionName: metric_t2v4qbfiz1_w6qgpx4h2p
+    sqlExpression: null
+  multiplier: 0.1
+  point_radius_fixed:
+    type: metric
+    value:
+      aggregate: null
+      column: null
+      expressionType: SQL
+      hasCustomLabel: null
+      label: Density
+      optionName: metric_c5rvwrzoo86_293h6yrv2ic
+      sqlExpression: SUM(population)/SUM(area)
+  reverse_long_lat: false
+  slice_id: 41
+  stroke_color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  stroked: false
+  time_grain_sqla: null
+  time_range: ' : '
+  viewport:
+    altitude: 1.5
+    bearing: 37.89506450385642
+    height: 906
+    latitude: 37.752020331384834
+    longitude: -122.43388541747726
+    maxLatitude: 85.05113
+    maxPitch: 60
+    maxZoom: 20
+    minLatitude: -85.05113
+    minPitch: 0
+    minZoom: 0
+    pitch: 60
+    width: 667
+    zoom: 11.133995608594631
+  viz_type: deck_polygon
+query_context: null
+slice_name: Deck.gl Polygons
+uuid: 127e3814-2100-494b-90b5-63fd9d47d2b6
+version: 1.0.0
+viz_type: deck_polygon

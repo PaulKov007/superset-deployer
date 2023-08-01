@@ -1,0 +1,31 @@
+_deploy_dataset_name: wb_health_population
+cache_timeout: null
+certification_details: null
+certified_by: null
+dataset_uuid: c9a144d9-72f2-491a-85d2-b4517e0b20dc
+description: null
+params:
+  compare_lag: '10'
+  compare_suffix: o10Y
+  country_fieldtype: cca3
+  entity: country_code
+  granularity_sqla: year
+  groupby:
+  - region
+  limit: '25'
+  markup_type: markdown
+  metrics:
+  - sum__SP_POP_TOTL
+  row_limit: 50000
+  show_bubbles: true
+  since: '1960-01-01'
+  time_range: '2014-01-01 : 2014-01-02'
+  until: now
+  viz_type: box_plot
+  whisker_options: Min/max (no outliers)
+  x_ticks_layout: staggered
+query_context: null
+slice_name: Box plot
+uuid: a18c007d-93ea-44ea-b45c-aebbe0654492
+version: 1.0.0
+viz_type: box_plot

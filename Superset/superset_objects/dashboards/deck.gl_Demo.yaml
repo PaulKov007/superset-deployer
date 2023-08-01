@@ -1,0 +1,134 @@
+css: null
+dashboard_title: deck.gl Demo
+description: null
+position:
+  CHART-201f7715:
+    children: []
+    id: CHART-201f7715
+    meta:
+      _deploy_chart_name: Deck.gl_Hexagons
+      chartId: 198
+      height: 50
+      sliceName: Deck.gl Hexagons
+      uuid: 2a783232-f0c0-4940-befa-adfe7cacee99
+      width: 6
+    type: CHART
+  CHART-2673431d:
+    children: []
+    id: CHART-2673431d
+    meta:
+      _deploy_chart_name: Deck.gl_Polygons
+      chartId: 200
+      height: 50
+      sliceName: Deck.gl Polygons
+      uuid: 127e3814-2100-494b-90b5-63fd9d47d2b6
+      width: 6
+    type: CHART
+  CHART-2b87513c:
+    children: []
+    id: CHART-2b87513c
+    meta:
+      _deploy_chart_name: Deck.gl_Path
+      chartId: 202
+      height: 50
+      sliceName: Deck.gl Path
+      uuid: b9b419a4-48a8-4308-88af-f14d81905300
+      width: 6
+    type: CHART
+  CHART-2ee7fa5e:
+    children: []
+    id: CHART-2ee7fa5e
+    meta:
+      _deploy_chart_name: Deck.gl_Screen_grid
+      chartId: 197
+      height: 50
+      sliceName: Deck.gl Screen grid
+      uuid: 26d4d90e-c276-4af4-a08e-3485608b3b59
+      width: 6
+    type: CHART
+  CHART-3afd9d70:
+    children: []
+    id: CHART-3afd9d70
+    meta:
+      _deploy_chart_name: Deck.gl_Scatterplot
+      chartId: 196
+      height: 50
+      sliceName: Deck.gl Scatterplot
+      uuid: cab0aef0-dfd0-4553-9790-71137cc8ac9a
+      width: 6
+    type: CHART
+  CHART-85265a60:
+    children: []
+    id: CHART-85265a60
+    meta:
+      _deploy_chart_name: Deck.gl_Arcs
+      chartId: 201
+      height: 50
+      sliceName: Deck.gl Arcs
+      uuid: 8c242a4e-e92f-489b-9b16-f9a2215a47a7
+      width: 6
+    type: CHART
+  CHART-d02f6c40:
+    children: []
+    id: CHART-d02f6c40
+    meta:
+      _deploy_chart_name: Deck.gl_Grid
+      chartId: 199
+      height: 50
+      sliceName: Deck.gl Grid
+      uuid: ba4493d7-fc20-4c98-85d7-59ebf3878c64
+      width: 6
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-a7b16cb5
+    - ROW-72c218a5
+    - ROW-957ba55b
+    - ROW-af041bdd
+    id: GRID_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: deck.gl Demo
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-72c218a5:
+    children:
+    - CHART-d02f6c40
+    - CHART-201f7715
+    id: ROW-72c218a5
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-957ba55b:
+    children:
+    - CHART-2673431d
+    - CHART-85265a60
+    id: ROW-957ba55b
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-a7b16cb5:
+    children:
+    - CHART-3afd9d70
+    - CHART-2ee7fa5e
+    id: ROW-a7b16cb5
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+  ROW-af041bdd:
+    children:
+    - CHART-2b87513c
+    id: ROW-af041bdd
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+slug: deck
+uuid: 44404915-95c4-458b-b396-8e166c0e6e06
+version: 1.0.0

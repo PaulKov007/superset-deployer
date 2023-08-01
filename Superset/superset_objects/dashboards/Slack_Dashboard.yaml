@@ -1,0 +1,408 @@
+css: null
+dashboard_title: Slack Dashboard
+description: null
+metadata:
+  color_scheme: supersetColors
+  color_scheme_domain:
+  - '#1FA8C9'
+  - '#454E7C'
+  - '#5AC189'
+  - '#FF7F44'
+  - '#666666'
+  - '#E04355'
+  - '#FCC700'
+  - '#A868B7'
+  - '#3CCCCB'
+  - '#A38F79'
+  - '#8FD3E4'
+  - '#A1A6BD'
+  - '#ACE1C4'
+  - '#FEC0A1'
+  - '#B2B2B2'
+  - '#EFA1AA'
+  - '#FDE380'
+  - '#D3B3DA'
+  - '#9EE5E5'
+  - '#D1C6BC'
+  cross_filters_enabled: true
+  default_filters: '{}'
+  expanded_slices: {}
+  label_colors:
+    '0': '#1FA8C9'
+    '1': '#454E7C'
+    announcements: '#A868B7'
+    apache-releases: '#666666'
+    beginners: '#666666'
+    commits: '#E04355'
+    community-feedback: '#EFA1AA'
+    contributing: '#8FD3E4'
+    cypress-tests: '#FDE380'
+    dashboard-filters: '#FCC700'
+    dashboard-level-access: '#D1C6BC'
+    dashboards: '#3CCCCB'
+    design: '#1FA8C9'
+    developers: '#9EE5E5'
+    embedd-dashboards: '#ACE1C4'
+    feature-requests: '#454E7C'
+    general: '#3CCCCB'
+    github-notifications: '#E04355'
+    globalnav_search: '#A1A6BD'
+    graduation: '#A1A6BD'
+    helm-k8-deployment: '#FEC0A1'
+    introductions: '#5AC189'
+    jobs: '#FF7F44'
+    localization: '#5AC189'
+    newsletter: '#FF7F44'
+    product_feedback: '#D3B3DA'
+    pull-requests: '#A38F79'
+    superset-champions: '#FCC700'
+    superset_prod_reports: '#A868B7'
+    superset_stage_alerts: '#A38F79'
+    support: '#8FD3E4'
+    visualization_plugins: '#B2B2B2'
+  native_filter_configuration:
+  - cascadeParentIds: []
+    controlValues:
+      defaultToFirstItem: false
+      enableEmptyFilter: false
+      inverseSelection: false
+      multiSelect: true
+      searchAllOptions: false
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    description: ''
+    filterType: filter_select
+    id: NATIVE_FILTER-YCCi7zG1v
+    name: Team filter
+    scope:
+      excluded:
+      - 208
+      - 222
+      - 235
+      - 236
+      - 237
+      - 243
+      - 258
+      - 261
+      rootPath:
+      - ROOT_ID
+    targets:
+    - _deploy_dataset_name: messages
+      column:
+        name: team
+      datasetUuid: e032c69e-716e-d700-eff7-07800d0f9989
+    type: NATIVE_FILTER
+  - description: ''
+    id: NATIVE_FILTER_DIVIDER-qBfdWr5_H
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    title: MyDivider
+    type: DIVIDER
+  - cascadeParentIds: []
+    controlValues:
+      defaultToFirstItem: false
+      enableEmptyFilter: false
+      inverseSelection: false
+      multiSelect: false
+      searchAllOptions: false
+    defaultDataMask:
+      __cache:
+        label: <NULL>
+        validateMessage: false
+        validateStatus: false
+        value:
+        - null
+      extraFormData:
+        filters:
+        - col: subscribed
+          op: IN
+          val:
+          - null
+      filterState:
+        label: <NULL>
+        validateMessage: false
+        validateStatus: false
+        value:
+        - null
+    description: ''
+    filterType: filter_select
+    id: NATIVE_FILTER-rt5Af_byE
+    name: Subscribed
+    scope:
+      excluded:
+      - 208
+      - 222
+      - 224
+      - 236
+      - 237
+      - 243
+      - 258
+      - 261
+      rootPath:
+      - ROOT_ID
+    targets:
+    - _deploy_dataset_name: threads
+      column:
+        name: subscribed
+      datasetUuid: d7438be6-6078-17dd-cf9a-56f0ef546c80
+    type: NATIVE_FILTER
+  refresh_frequency: 0
+  shared_label_colors: {}
+  show_native_filters: true
+  timed_refresh_immune_slices: []
+position:
+  CHART-EYIBwyUiHc:
+    children: []
+    id: CHART-EYIBwyUiHc
+    meta:
+      _deploy_chart_name: Members_per_Channel
+      chartId: 258
+      height: 70
+      sliceName: Members per Channel
+      uuid: d44e416d-1647-44e4-b442-6da34b44adc4
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PgcMF2PpB
+    type: CHART
+  CHART-FwpJA_o1-n:
+    children: []
+    id: CHART-FwpJA_o1-n
+    meta:
+      _deploy_chart_name: New_Members_per_Month
+      chartId: 222
+      height: 44
+      sliceName: New Members per Month
+      uuid: 92e1d712-bcf9-4d7e-9b94-26cffe502908
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-aseZBdP1v
+    type: CHART
+  CHART-JhE-Y0xxgi:
+    children: []
+    id: CHART-JhE-Y0xxgi
+    meta:
+      _deploy_chart_name: Top_Timezones
+      chartId: 243
+      height: 44
+      sliceName: Top Timezones
+      sliceNameOverride: Top Timezones for Members
+      uuid: 62b7242e-decc-2d1b-7f80-c62776939d1e
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-aseZBdP1v
+    type: CHART
+  CHART-RbxP2Dl7Ad:
+    children: []
+    id: CHART-RbxP2Dl7Ad
+    meta:
+      _deploy_chart_name: Weekly_Messages
+      chartId: 224
+      height: 44
+      sliceName: Weekly Messages
+      uuid: abe2c022-ceee-a60a-e601-ab93f7ee52b1
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-aseZBdP1v
+    type: CHART
+  CHART-ZREH96G4:
+    children: []
+    id: CHART-ZREH96G4
+    meta:
+      _deploy_chart_name: Referalnye_offery
+      chartId: 265
+      height: 50
+      sliceName: Реферальные офферы
+      uuid: 21b62210-ba1a-428e-bde9-cc68aff5c52a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-Q4K0NAQP
+    type: CHART
+  CHART-cj9KtCNRq3:
+    children: []
+    id: CHART-cj9KtCNRq3
+    meta:
+      _deploy_chart_name: Number_of_Members
+      chartId: 261
+      height: 19
+      sliceName: Number of Members
+      uuid: 7dad983b-e9f6-d2e8-91da-c2262d4e84e8
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-aseZBdP1v
+    - COLUMN-4bvhV9jxDI
+    type: CHART
+  CHART-ej0FpkKxzj:
+    children: []
+    id: CHART-ej0FpkKxzj
+    meta:
+      _deploy_chart_name: Cross_Channel_Relationship_heatmap
+      chartId: 236
+      height: 69
+      sliceName: Cross Channel Relationship
+      uuid: 6cb43397-5c62-4f32-bde2-95344c412b5a
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PgcMF2PpB
+    type: CHART
+  CHART-f42-kMWQPd:
+    children: []
+    id: CHART-f42-kMWQPd
+    meta:
+      _deploy_chart_name: Cross_Channel_Relationship
+      chartId: 237
+      height: 68
+      sliceName: Cross Channel Relationship
+      uuid: f2a8731b-3d8c-4d86-9d33-7c0a3e64d21c
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-PgcMF2PpB
+    type: CHART
+  CHART-tMLHDtzb67:
+    children: []
+    id: CHART-tMLHDtzb67
+    meta:
+      _deploy_chart_name: Messages_per_Channel
+      chartId: 208
+      height: 85
+      sliceName: Messages per Channel
+      uuid: b0f11bdf-793f-473f-b7d5-b9265e657896
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-y62Rf2K3m
+    type: CHART
+  CHART-vIvrauAMxV:
+    children: []
+    id: CHART-vIvrauAMxV
+    meta:
+      _deploy_chart_name: Weekly_Threads
+      chartId: 235
+      height: 44
+      sliceName: Weekly Threads
+      uuid: 9f742bdd-cac1-468c-3a37-35c9b3cfd5bb
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-aseZBdP1v
+    type: CHART
+  COLUMN-4bvhV9jxDI:
+    children:
+    - MARKDOWN--8u3tfVF49
+    - CHART-cj9KtCNRq3
+    id: COLUMN-4bvhV9jxDI
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-aseZBdP1v
+    type: COLUMN
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-aseZBdP1v
+    - ROW-y62Rf2K3m
+    - ROW-PgcMF2PpB
+    - ROW-N-Q4K0NAQP
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Slack Dashboard
+    type: HEADER
+  MARKDOWN--8u3tfVF49:
+    children: []
+    id: MARKDOWN--8u3tfVF49
+    meta:
+      code: <img src="https://cdn.brandfolder.io/5H442O3W/at/pl546j-7le8zk-838dm2/Slack_RGB.svg">
+      height: 23
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-aseZBdP1v
+    - COLUMN-4bvhV9jxDI
+    type: MARKDOWN
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-N-Q4K0NAQP:
+    children:
+    - CHART-ZREH96G4
+    id: ROW-N-Q4K0NAQP
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-PgcMF2PpB:
+    children:
+    - CHART-EYIBwyUiHc
+    - CHART-f42-kMWQPd
+    - CHART-ej0FpkKxzj
+    id: ROW-PgcMF2PpB
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-aseZBdP1v:
+    children:
+    - COLUMN-4bvhV9jxDI
+    - CHART-vIvrauAMxV
+    - CHART-RbxP2Dl7Ad
+    - CHART-FwpJA_o1-n
+    - CHART-JhE-Y0xxgi
+    id: ROW-aseZBdP1v
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-y62Rf2K3m:
+    children:
+    - CHART-tMLHDtzb67
+    id: ROW-y62Rf2K3m
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+slug: Slack_Dashboard
+uuid: 9726d8b0-222f-eb2c-034a-02b9f51ef5fd
+version: 1.0.0

@@ -1,0 +1,23 @@
+_deploy_dataset_name: birth_names
+cache_timeout: null
+certification_details: null
+certified_by: null
+dataset_uuid: 7ec75d28-760b-4189-899a-7d9e3aadee07
+description: null
+params:
+  compare_lag: '10'
+  compare_suffix: o10Y
+  granularity_sqla: ds
+  groupby:
+  - gender
+  limit: '25'
+  markup_type: markdown
+  metric: sum__num
+  row_limit: 50000
+  time_range: '100 years ago : now'
+  viz_type: pie
+query_context: null
+slice_name: Genders
+uuid: c95b92e0-0360-4051-adac-55bd5f45b939
+version: 1.0.0
+viz_type: pie

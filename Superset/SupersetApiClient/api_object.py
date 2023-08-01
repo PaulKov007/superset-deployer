@@ -1,4 +1,6 @@
 import json
+
+import requests
 import yaml
 import os
 import io
@@ -127,13 +129,28 @@ class ApiObject:
             raise ValueError(f"Unknown content type {content_type}")
         return buffer
 
-    def import_from_file(self, file_path: str, overwrite: bool = False, passwords=None) -> bool:
+    def import_from_buffer(self, buffer: io.BytesIO, overwrite: bool = False, passwords=None) -> requests.Response:
         passwords = {f"databases/{db}.yaml": pwd for db, pwd in (passwords or {}).items()}
-        file_name = os.path.split(file_path)[-1]
-        file_ext = os.path.splitext(file_name)[-1].lstrip(".").lower()
+        buffer.seek(0)
+        files = dict(
+            formData=("import_from_buffer.zip", buffer, f"application/zip"),
+            passwords=(None, json.dumps(passwords), None),
+        )
+        response = self.client.post(
+            self.import_endpoint,
+            files=files,
+            data=dict(overwrite=json.dumps(overwrite)),
+            headers={"Accept": "application/json"},
+        )
+        response.raise_for_status()
+        return response
+
+    def import_from_file(self, file_path: str, overwrite: bool = False, passwords=None) -> requests.Response:
+        passwords = {f"databases/{db}.yaml": pwd for db, pwd in (passwords or {}).items()}
+        file_ext = os.path.splitext(file_path)[-1].lstrip(".").lower()
         with open(file_path, "rb") as f:
             files = dict(
-                formData=(file_name, f, f"application/{file_ext}"),
+                formData=(file_path, f, f"application/{file_ext}"),
                 passwords=(None, json.dumps(passwords), None),
             )
             response = self.client.post(
@@ -142,7 +159,8 @@ class ApiObject:
                 data=dict(overwrite=json.dumps(overwrite)),
                 headers={"Accept": "application/json"},
             )
-            return response.json().get("message") == "OK"
+            response.raise_for_status()
+            return response
 
 
     @cached_property

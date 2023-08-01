@@ -1,6 +1,6 @@
-from deployer.superset.superset_api.api_object import ApiObject
-from deployer.superset.superset_api.charts import Chart
-from deployer.superset.superset_api.data_model import DataModel, default_string, json_field
+from SupersetApiClient.api_object import ApiObject
+from SupersetApiClient.charts import Chart
+from SupersetApiClient.data_model import DataModel, default_string, json_field
 from dataclasses import dataclass, field
 
 

@@ -1,0 +1,16 @@
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+allow_run_async: false
+cache_timeout: null
+database_name: examples
+expose_in_sqllab: true
+extra:
+  engine_params: {}
+  metadata_cache_timeout: {}
+  metadata_params: {}
+  schemas_allowed_for_file_upload: []
+sqlalchemy_uri: postgresql://superset:XXXXXXXXXX@db:5432/superset
+uuid: a2dc77af-e654-49bb-b321-40f6b559a1ee
+version: 1.0.0

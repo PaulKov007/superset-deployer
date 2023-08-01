@@ -1,0 +1,1 @@
+SELECT m.ts, c.name, m.text FROM messages m JOIN channels c ON m.channel_id = c.id

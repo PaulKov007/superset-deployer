@@ -1,0 +1,31 @@
+_deploy_dataset_name: birth_names
+cache_timeout: null
+certification_details: null
+certified_by: null
+dataset_uuid: 7ec75d28-760b-4189-899a-7d9e3aadee07
+description: null
+params:
+  compare_lag: '10'
+  compare_suffix: o10Y
+  granularity_sqla: ds
+  groupby: []
+  groupbyColumns:
+  - state
+  groupbyRows:
+  - name
+  limit: '25'
+  markup_type: markdown
+  metrics:
+  - sum__num
+  row_limit: 50000
+  time_range: '100 years ago : now'
+  viz_type: pivot_table_v2
+query_context: "{\n    \"datasource\": {\n        \"id\": 25,\n        \"type\": \"\
+  table\"\n    },\n    \"queries\": [\n        {\n            \"columns\": [\n   \
+  \             \"name\",\n                \"state\"\n            ],\n           \
+  \ \"metrics\": [\n                \"sum__num\"\n            ]\n        }\n    ],\n\
+  \    \"result_format\": \"json\",\n    \"result_type\": \"full\"\n}"
+slice_name: Pivot Table v2
+uuid: 376bcbfe-68fe-4caf-a695-34753ec34d9a
+version: 1.0.0
+viz_type: pivot_table_v2

@@ -1,0 +1,43 @@
+_deploy_dataset_name: long_lat
+cache_timeout: null
+certification_details: null
+certified_by: null
+dataset_uuid: 43d300ba-5f85-4530-81c7-047428fa9712
+description: null
+params:
+  color_picker:
+    a: 1
+    b: 0
+    g: 255
+    r: 14
+  datasource: 5__table
+  extruded: true
+  granularity_sqla: null
+  grid_size: 40
+  groupby: []
+  mapbox_style: mapbox://styles/mapbox/streets-v9
+  point_radius: Auto
+  point_radius_fixed:
+    type: fix
+    value: 2000
+  point_radius_unit: Pixels
+  row_limit: 5000
+  size: count
+  spatial:
+    latCol: LAT
+    lonCol: LON
+    type: latlong
+  time_grain_sqla: null
+  time_range: No filter
+  viewport:
+    bearing: -2.3984797349335167
+    latitude: 37.789795085160335
+    longitude: -122.40632230075536
+    pitch: 54.08961642447763
+    zoom: 13.835465702403654
+  viz_type: deck_hex
+query_context: null
+slice_name: Deck.gl Hexagons
+uuid: 2a783232-f0c0-4940-befa-adfe7cacee99
+version: 1.0.0
+viz_type: deck_hex
